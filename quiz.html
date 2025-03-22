@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz On The Team</title>
+    <link rel="stylesheet" href="quiz_style.css">
+</head>
+<body>
+    <header>
+        <h2><a href="" class = "logo">Lebanon National Football Team</a></h2>
+        <ul>
+            <li><a href="index.html" onclick="setActive(this)" >Home</a></li>
+            <li><a href="players.html" onclick="setActive(this)">Players</a></li>
+            <li><a href="quiz.html" onclick="setActive(this)">Quiz</a></li>
+        </ul>
+    </header>
+
+    <div class="quiz-container">
+        <h1> Quiz</h1>
+        <div class="question-container">
+            <p id="question-text"></p>
+            <ul id="answer-list">
+                
+            </ul>
+        </div>
+        <button id="next-button" onclick="nextQuestion()">Next Question</button>
+        <div id="score-container" style="display:none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button id="replay-button" onclick="replayQuiz()">Replay Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

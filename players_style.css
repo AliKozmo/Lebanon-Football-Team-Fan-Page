@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #982b2b;
+
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    display: flex;
+    /*when we have parents and we want to change the position of children we use flex  */
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+header ul{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+
+}
+header ul li {
+    margin-right:  30px;
+}
+
+header ul li a {
+    padding:  4px 10px;
+    border-radius: 20px;
+}
+header ul li a:hover, .active{
+    background: white;
+    color: #982b2b;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    height:auto;
+    max-height: 650px;
+}
+.main_image{
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 150px;
+    text-align: center;
+
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 16px; /* Space between images */
+    padding-left: 70px;
+    margin: 10px;
+}   
+.gallery img { 
+    transition: transform 1s ease, opacity 1s ease; 
+    border: 2px solid gold;
+    border-radius: 15px;
+    
+}
+.gallery_item{
+    position: relative;
+}
+
+.text_image{
+    position: absolute;
+
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.gallery_item:hover img{
+    filter: blur(20px);
+    transform: scale(1.05);
+
+}
+
+.gallery_item:hover .text_image{
+    opacity: 1;
+    visibility: visible;
+}
+.footer{
+    color: white;
+    background-color: black;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: space-between;
+    padding:2em;
+    
+}
+.logos_footer{
+    /* min-width:20em ; */
+    display: flex;
+    justify-content: space-between;
+}
+.footer span{
+    color: #FFBF00;
+    font-weight: 700;
+}
+.footer i{
+    margin-left: 10px;
+    padding: 5px;
+}
+.footer p{
+    margin-right:10px ;
+}
+.text_image p {
+    color: white;
+}
